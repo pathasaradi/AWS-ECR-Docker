@@ -13,10 +13,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install AWS CLI on Linux
+    - name: Install AWS CLI
       run: |
-        sudo yum update -y
-        sudo yum install -y awscli
+        sudo apt-get update -y
+        sudo apt-get install -y awscli
         aws --version  # Verify installation
 
     - name: Log in to Amazon ECR
